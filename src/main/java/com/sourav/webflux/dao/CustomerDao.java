@@ -29,7 +29,7 @@ public class CustomerDao {
 
     public Flux<Customer> getAllCustomersStream() {
         return Flux.range(1, 10)
-                .delayElements(Duration.ofSeconds(1000))
+                .delayElements(Duration.ofSeconds(1))
                 .doOnNext(id -> System.out.println("processing count in stream flow : " + id))
                 .map(id -> new Customer(id, "customer" + id));
     }

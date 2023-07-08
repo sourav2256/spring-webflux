@@ -3,6 +3,7 @@ package com.sourav.webflux.controller;
 import com.sourav.webflux.dto.Customer;
 import com.sourav.webflux.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +22,7 @@ public class CustomerController {
     public List<Customer> getAllCustomers() {
         return customerService.loadAllCustomers();
     }
-    @GetMapping("/stream")
+    @GetMapping(value = "/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Customer> getAllCustomersStream() {
         return customerService.loadAllCustomersStream();
     }
