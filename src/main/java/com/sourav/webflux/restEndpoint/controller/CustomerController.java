@@ -1,7 +1,7 @@
-package com.sourav.webflux.controller;
+package com.sourav.webflux.restEndpoint.controller;
 
-import com.sourav.webflux.dto.Customer;
-import com.sourav.webflux.service.CustomerService;
+import com.sourav.webflux.restEndpoint.dto.Customer;
+import com.sourav.webflux.restEndpoint.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

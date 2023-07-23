@@ -11,8 +11,12 @@
     <groupId>com.sourav</groupId>
     <artifactId>springboot_webflux_demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>springboot_webflux_demo</name>
     <description>springboot_webflux_demo</description>
+    <modules>
+        <module>spring-reactive-mongo-crud</module>
+    </modules>
     <properties>
         <java.version>20</java.version>
     </properties>

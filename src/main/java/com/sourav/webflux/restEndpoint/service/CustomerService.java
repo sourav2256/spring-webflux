@@ -1,7 +1,7 @@
-package com.sourav.webflux.service;
+package com.sourav.webflux.restEndpoint.service;
 
-import com.sourav.webflux.dao.CustomerDao;
-import com.sourav.webflux.dto.Customer;
+import com.sourav.webflux.restEndpoint.dao.CustomerDao;
+import com.sourav.webflux.restEndpoint.dto.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;

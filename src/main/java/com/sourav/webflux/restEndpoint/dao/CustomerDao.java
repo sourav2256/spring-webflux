@@ -1,6 +1,6 @@
-package com.sourav.webflux.dao;
+package com.sourav.webflux.restEndpoint.dao;
 
-import com.sourav.webflux.dto.Customer;
+import com.sourav.webflux.restEndpoint.dto.Customer;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 
@@ -35,8 +35,7 @@ public class CustomerDao {
     }
 
     public Flux<Customer> getAllCustomers() {
-        return Flux.range(1, 500)
-                .delayElements(Duration.ofSeconds(1))
+        return Flux.range(1, 50)
                 .doOnNext(id -> System.out.println("processing count in stream flow : " + id))
                 .map(id -> new Customer(id, "customer" + id));
     }
